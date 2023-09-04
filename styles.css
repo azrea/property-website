@@ -1,0 +1,414 @@
+:root {
+  --main-colour: #2c2827;
+  --secondary-colour: #e69215;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  color: white;
+}
+
+#container {
+  background-color: var(--main-colour);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+nav {
+  height: 150px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-colour);
+  z-index: 100;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 100px;
+}
+
+#navLinks {
+  width: 35%;
+  min-width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#navLinks a {
+  color: var(--secondary-colour);
+  text-decoration: none;
+  font-size: 25px;
+}
+
+#navLinks button {
+  font-size: 25px;
+  color: var(--main-colour);
+  background-color: var(--secondary-colour);
+  border: none;
+  border-radius: 7px;
+  padding: 7px 20px;
+}
+
+#heroContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 0, 0, 0.6);
+}
+
+#heroContainer {
+  background-image: url("./Images/hero-image1.jpg");
+  margin-top: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--main-colour);
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heroContent {
+  color: var(--main-colour);
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 75px;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#heroContent p:nth-child(3) {
+  font-size: 75px;
+}
+
+/* #heroContent span,
+#heroContent p:nth-child(4) {
+  color: var(--secondary-colour);
+} */
+
+.accent {
+  color: var(--secondary-colour);
+  font-weight: bold;
+}
+
+.mainContent {
+  height: 100vh;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.hurdlesContainer {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.hurdles {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+}
+
+.row {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hurdle {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hurdle p {
+  margin-top: 20px;
+}
+
+.hurdle img {
+  width: 100px;
+}
+
+.hurdles .row:nth-child(1) img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.solutions {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.solutions h3 {
+  font-weight: normal;
+  margin-bottom: 80px;
+}
+
+.solutions > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.solutions > div > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  object-fit: cover;
+  transform: scaleY(-1) scaleX(-1);
+}
+
+.sellContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.sellContainer div:nth-child(2) {
+  width: 40%;
+}
+
+.sellContainer div:nth-child(2) img {
+  width: 70%;
+  max-width: 700px;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.sellContainer div:nth-child(1) {
+  width: 60%;
+  text-align: center;
+}
+
+.sellContainer div:nth-child(1) h2 {
+  font-size: 25px;
+}
+
+.sellContainer div:nth-child(1) p {
+  font-size: 15px;
+}
+.sellContainer div:nth-child(1) button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  font-weight: bold;
+  background-color: var(--secondary-colour);
+  color: var(--main-colour);
+  border: none;
+  border-radius: 10px;
+}
+
+#aboutUs {
+  margin-top: 200px;
+}
+#aboutUs > div {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#aboutUs > div .image {
+  width: 40%;
+}
+
+#aboutUs > div .content {
+  width: 59%;
+}
+
+#aboutUs > div .image img {
+  width: 85%;
+  max-width: 500px;
+  border-radius: 20px;
+  border: 5px solid var(--secondary-colour);
+  filter: brightness(0.8);
+  margin: auto;
+}
+
+#aboutUs h1 {
+  font-size: 30px;
+}
+
+#aboutUs h2 {
+  font-size: 25px;
+}
+
+#aboutUs h3 {
+  font-size: 20px;
+}
+
+#aboutUs p {
+  font-size: 15px;
+}
+
+#aboutUs .footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#aboutUs .footer img {
+  width: 20%;
+  object-fit: contain;
+  border: solid 5px var(--secondary-colour);
+  border-radius: 20px;
+}
+
+#aboutUs .footer div {
+  width: 50%;
+}
+
+#infoSection {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+#infoSection .content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#infoSection .image {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+}
+
+#infoSection .image img {
+  width: 100%;
+}
+
+#infoSection .image h2 {
+  width: 100%;
+  position: absolute;
+  bottom: 4px;
+  background-color: var(--secondary-colour);
+  color: var(--main-colour);
+  text-align: center;
+  font-size: 30px;
+}
+
+#infoSection button {
+  padding: 5px 20px;
+  color: var(--main-colour);
+  background-color: var(--secondary-colour);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#contactUsForm {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+#contactUsForm .image {
+  width: 30%;
+  position: relative;
+}
+
+#contactUsForm .image img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#contactUsForm .image p {
+  background-color: var(--secondary-colour);
+  color: var(--main-colour);
+  padding: 5px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+}
+
+#contactUsForm .form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+#contactUsForm form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+#contactUsForm form div {
+  width: 100%;
+  text-align: center;
+}
+
+#contactUsForm form input {
+  width: 45%;
+  padding: 7px;
+  border: 2px solid var(--secondary-colour);
+  border-radius: 5px;
+}
+
+#contactUsForm button {
+  padding: 5px 20px;
+  background-color: var(--secondary-colour);
+  color: var(--main-colour);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#contactUsForm textarea {
+  border: solid 2px var(--secondary-colour);
+  padding: 7px;
+}
