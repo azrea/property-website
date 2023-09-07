@@ -180,14 +180,14 @@
             <div class="form">
                 <h1 class="accent">Contact Us</h1>
 
-                <form action="">
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <div>
                         <input type="text" name="name" id="name" placeholder="Name...">
                         <input type="email" name="email" id="email" placeholder="Email...">
 
                     </div>
                     <textarea name="message" id="message" cols="102" rows="5"
-                        placeholder="Enter your Inquiry..."></textarea>
+                        placeholder="How can we help you?"></textarea>
                     <button>SUBMIT</button>
                 </form>
             </div>
@@ -195,5 +195,23 @@
 
     </div>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+    function sendEmail () {
+        Email.send( {
+            Host: "smtp.elasticemail.com",
+            Username: "dattah524@gmail.com",
+            Password: "D20DD9F051986C00609385EFD708D47CB980",
+            To: 'zogedofa@mailgolem.com',
+            From: 'dattah524@gmail.com',
+            Subject: "New Enquiry",
+            Body: "<p> Name : " + document.getElementById( 'name' ).value + "</p>" + "<p> Email : " + document.getElementById( 'email' ).value + "</p>" + "<p> Message : " + document.getElementById( 'message' ).value + "</p>"
+        } ).then(
+            message => alert( message )
+        );
+    }
+</script>
 
 </html>
