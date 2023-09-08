@@ -14,8 +14,9 @@
             <img src="./Images/Zenith-Properties-logo.jpg" alt="" id="logoImg">
 
             <div id="navLinks">
-                <a href="#AboutUs">About Us</a>
-                <a href="#contactUsForm" class="button">Contact Us</a>
+                <a href="#aboutUs" onclick="scrollToSection('aboutUs'); return false;">About Us</a>
+                <a href="#contactUsForm" class="button"
+                    onclick="scrollToSection('contactUsForm'); return false;">Contact Us</a>
             </div>
         </nav>
 
@@ -60,14 +61,14 @@
             <div>
                 <h1>Selling a home should never be an ordeal;</h1>
                 <p>That's why we are here to provide a swift and stress free path forward.</p>
-                <a href="#contactUsForm" class="button">Get in Touch</a>
+                <a href="#contactUsForm" class="button" onclick="scrollToSection('contactUsForm'); return false;">Get in
+                    Touch</a>
             </div>
 
             <div class="image">
                 <img src="./Images/sold-sign.jpg" alt="">
             </div>
         </div>
-        <div id="AboutUs"></div>
         <div id="aboutUs">
             <div class="content">
                 <h1 class="accent" style="margin-bottom: 30px;">What sets us apart is our dedication to your well
@@ -163,7 +164,8 @@
                 <img src="./Images/house-sunset.jpg" alt="">
                 <h2>Ready to explore a brighter future?</h2>
             </div>
-            <a href="#contactUsForm" class="button">Contact Us Today!</a>
+            <a href="#contactUsForm" class="button" onclick="scrollToSection('contactUsForm'); return false;">Contact Us
+                Today!</a>
         </div>
 
         <div id="contactUsForm">
@@ -192,6 +194,14 @@
         </div>
 
     </div>
+    <script>
+        function scrollToSection ( sectionId ) {
+            var section = document.getElementById( sectionId );
+            if ( section ) {
+                section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -164,7 +164,6 @@ nav img {
   gap: 2rem;
   text-align: center;
   color: var(--secondary-colour);
-  background-color: #fff;
 }
 
 #mainSolution div:nth-child(1) {
