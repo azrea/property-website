@@ -14,8 +14,9 @@
             <img src="./Images/Zenith-Properties-logo.jpg" alt="" id="logoImg">
 
             <div id="navLinks">
-                <a href="#">About Us</a>
-                <button>Contact Us</button>
+                <a href="#aboutUs" onclick="scrollToSection('aboutUs'); return false;">About Us</a>
+                <a href="#contactUsForm" class="button"
+                    onclick="scrollToSection('contactUsForm'); return false;">Contact Us</a>
             </div>
         </nav>
 
@@ -60,74 +61,72 @@
             <div>
                 <h1>Selling a home should never be an ordeal;</h1>
                 <p>That's why we are here to provide a swift and stress free path forward.</p>
-                <button>Get in Touch</button>
+                <a href="#contactUsForm" class="button" onclick="scrollToSection('contactUsForm'); return false;">Get in
+                    Touch</a>
             </div>
 
             <div class="image">
                 <img src="./Images/sold-sign.jpg" alt="">
             </div>
         </div>
-
         <div id="aboutUs">
-            <div>
-                <div class="content">
-                    <h1 class="accent" style="margin-bottom: 30px;">What sets us apart is our dedication to your well
-                        being.
-                    </h1>
+            <div class="content">
+                <h1 class="accent" style="margin-bottom: 30px;">What sets us apart is our dedication to your well
+                    being.
+                </h1>
 
-                    <div>
-                        <div style="margin-bottom: 30px;">
-                            <h2 class="accent">We are your dedicated property consultant.</h2>
-                            <p>working with both investors and landlords to provide <span class="accent">creative
-                                    solutions</span> to your problems</p>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h3>We are always ready to offer a <span class="accent">free and confidential
-                                    consultation</span>
-                                to those seeking guidance</h3>
-                            <h3>We never charge <span class="accent">agent fees</span></h3>
-                            <h3>Legal fees are of no concern to us;</h3>
-                            <p class="accent">They are already taken care of</p>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h3>With a promise to provide an <span class="accent">offer within 48 hours of
-                                    viewing,</span>
-                            </h3>
-                            <p>We not only respect your time but minimize your uncertainties in the process. <span
-                                    class="accent">Your
-                                    contentment and peace of mind is of utmost importance to us.</span>
-                            </p>
-                        </div>
-
-                        <div style="margin-bottom: 30px;">
-                            <h1 class="accent">Everyone's journey in the property world is unique,</h1>
-                            <p>and We are here to make it smoother. Let's navigate these challenges together and pave
-                                the
-                                way
-                                for your next venture - one that leads to <span class="accent">stability and
-                                    security</span>
-                            </p>
-                        </div>
+                <div>
+                    <div style="margin-bottom: 30px;">
+                        <h2 class="accent">We are your dedicated property consultant.</h2>
+                        <p>working with both investors and landlords to provide <span class="accent">creative
+                                solutions</span> to your problems</p>
                     </div>
-                </div>
 
-                <div class="image">
-                    <img src="./Images/building-sunset.jpg" alt="">
+                    <div style="margin-bottom: 30px;">
+                        <h3>We are always ready to offer a <span class="accent">free and confidential
+                                consultation</span>
+                            to those seeking guidance</h3>
+                        <h3>We never charge <span class="accent">agent fees</span></h3>
+                        <h3>Legal fees are of no concern to us;</h3>
+                        <p class="accent">They are already taken care of</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h3>With a promise to provide an <span class="accent">offer within 48 hours of
+                                viewing,</span>
+                        </h3>
+                        <p>We not only respect your time but minimize your uncertainties in the process. <span
+                                class="accent">Your
+                                contentment and peace of mind is of utmost importance to us.</span>
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h1 class="accent">Everyone's journey in the property world is unique,</h1>
+                        <p>and We are here to make it smoother. Let's navigate these challenges together and pave
+                            the
+                            way
+                            for your next venture - one that leads to <span class="accent">stability and
+                                security</span>
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer">
-                <img src="./Images/investing.jpg" alt="">
+            <div class="image">
+                <img src="./Images/building-sunset.jpg" alt="">
+            </div>
 
-                <div>
-                    <h3 class="accent">For Investors</h3>
-                    <p>We offer a unique opportunity to achieve <span class="accent">higher returns than other common
-                            investment options like banking or bonds.</span> With a keen understanding of the financial
-                        landscape, We provide <span class="accent">tailored strategies</span> that align with your
-                        investment goals.</p>
-                </div>
+        </div>
+        <div id="aboutUsFooter">
+            <img src="./Images/investing.jpg" alt="">
+
+            <div>
+                <h3 class="accent">For Investors</h3>
+                <p>We offer a unique opportunity to achieve <span class="accent">higher returns than other common
+                        investment options like banking or bonds.</span> With a keen understanding of the financial
+                    landscape, We provide <span class="accent">tailored strategies</span> that align with your
+                    investment goals.</p>
             </div>
         </div>
 
@@ -165,7 +164,8 @@
                 <img src="./Images/house-sunset.jpg" alt="">
                 <h2>Ready to explore a brighter future?</h2>
             </div>
-            <button>Contact Us Today!</button>
+            <a href="#contactUsForm" class="button" onclick="scrollToSection('contactUsForm'); return false;">Contact Us
+                Today!</a>
         </div>
 
         <div id="contactUsForm">
@@ -194,6 +194,14 @@
         </div>
 
     </div>
+    <script>
+        function scrollToSection ( sectionId ) {
+            var section = document.getElementById( sectionId );
+            if ( section ) {
+                section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+            }
+        }
+    </script>
 </body>
 
 </html>
