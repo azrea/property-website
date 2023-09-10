@@ -171,36 +171,37 @@
         <div id="contactUsForm">
             <div class="image">
                 <img src="./Images/path-to-prosperity.png" alt="">
-                <p>Get in touch with us for your free and confidential consultation.
-                    <span style="display: block;">Lay the first brick on your path to
-                        prosperity today!</span>
-                </p>
-            </div>
+                <div class="form">
+                    <h1 class="accent">Contact Us</h1>
 
-            <div class="form">
-                <h1 class="accent">Contact Us</h1>
+                    <form action="">
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Name...">
+                            <input type="email" name="email" id="email" placeholder="Email...">
 
-                <form action="">
-                    <div>
-                        <input type="text" name="name" id="name" placeholder="Name...">
-                        <input type="email" name="email" id="email" placeholder="Email...">
+                        </div>
+                        <textarea name="message" id="message" rows="1" placeholder="Enter your Inquiry..."></textarea>
+                        <button>SUBMIT</button>
+                    </form>
+                </div>
 
-                    </div>
-                    <textarea name="message" id="message" cols="102" rows="5"
-                        placeholder="Enter your Inquiry..."></textarea>
-                    <button>SUBMIT</button>
-                </form>
             </div>
         </div>
 
     </div>
     <script>
+        const textArea = document.getElementById( 'message' );
         function scrollToSection ( sectionId ) {
             var section = document.getElementById( sectionId );
             if ( section ) {
                 section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
             }
         }
+
+        textArea.addEventListener( 'input', function () {
+            this.style.height = 'auto';
+            this.style.height = ( this.scrollHeight + 2 ) + 'px';
+        } )
     </script>
 </body>
 
