@@ -306,6 +306,7 @@ nav img {
 
 #aboutUs h1 {
   font-size: 2vw;
+  margin-bottom: 30px;
 }
 
 #aboutUs h2 {
@@ -581,9 +582,9 @@ nav img {
   }
 
   #aboutUs {
-    padding: 20px;
+    padding: 10px;
     color: white;
-    height: 60vh;
+    height: 70vh;
   }
 
   #aboutUs .image {
@@ -596,18 +597,19 @@ nav img {
 
   #aboutUs h1 {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   #aboutUs h2 {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   #aboutUs h3 {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   #aboutUs p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   #aboutUsFooter {
@@ -635,9 +637,10 @@ nav img {
 
   #infoSection {
     width: 100%;
-    height: 140vh;
+    height: 950px;
     text-align: center;
     gap: 3rem;
+    background-color: blue;
   }
 
   #infoSection h1 {
@@ -661,5 +664,26 @@ nav img {
 
   #infoSection .image h2 {
     font-size: 15px;
+  }
+
+  #contactUsForm {
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  #contactUsForm .form {
+    width: 100%;
+  }
+
+  #contactUsForm form {
+    width: 95%;
+  }
+
+  #contactUsForm form input {
+    width: 40%;
+  }
+
+  #contactUsForm h1 {
+    font-size: 30px;
   }
 }
