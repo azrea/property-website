@@ -34,18 +34,21 @@ nav {
 }
 
 nav img {
-  width: 150px;
-  height: 150px;
+  width: 20%;
+  max-width: 150px;
   object-fit: contain;
   border-radius: 100px;
+  margin-left: 25px;
 }
 
 #navLinks {
   width: 35%;
   min-width: 500px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  gap: 5rem;
   align-items: center;
+  margin-right: 25px;
 }
 
 #navLinks a {
@@ -141,6 +144,7 @@ nav img {
 }
 
 #mainContent {
+  width: 100%;
   background-color: var(--secondary-colour);
   text-align: center;
   padding: 100px;
@@ -284,6 +288,7 @@ nav img {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  color: white;
 }
 
 #aboutUs .image {
@@ -482,7 +487,7 @@ nav img {
 /* Media Queries */
 
 /* Under 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     justify-content: center;
@@ -493,13 +498,14 @@ nav img {
   nav img {
     width: 100px;
     height: 100px;
+    margin-left: 0;
   }
 
   #navLinks {
     min-width: none;
     width: 90%;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-evenly;
+    margin-right: 0;
   }
 
   #navLinks a {
@@ -513,8 +519,6 @@ nav img {
   #heroContent {
     font-size: 25px;
     line-height: 40px;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   #heroContent p:nth-child(3) {
@@ -545,9 +549,11 @@ nav img {
     align-items: center;
     height: 200px;
     max-height: 200px;
+    max-width: max-content;
     overflow-y: scroll;
     overflow-x: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: auto;
   }
 
   #mainContent .hurdles .hurdle {
@@ -637,10 +643,9 @@ nav img {
 
   #infoSection {
     width: 100%;
-    height: 950px;
+    height: 1000px;
     text-align: center;
     gap: 3rem;
-    background-color: blue;
   }
 
   #infoSection h1 {
@@ -668,7 +673,7 @@ nav img {
 
   #contactUsForm {
     padding: 20px;
-    background-color: #fff;
+    margin-bottom: 50px;
   }
 
   #contactUsForm .form {
@@ -686,4 +691,120 @@ nav img {
   #contactUsForm h1 {
     font-size: 30px;
   }
+}
+
+/* over 600px and under 768px */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  #heroContent {
+    font-size: 45px;
+    line-height: 60px;
+  }
+
+  #heroContent p:nth-child(3) {
+    font-size: 55px;
+  }
+
+  #mainSolution h1 {
+    font-size: 30px;
+  }
+
+  #mainContent > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #mainContent > h1 {
+    font-size: 40px;
+  }
+
+  #mainContent > h3 {
+    font-size: 20px;
+  }
+
+  #aboutUs h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  #aboutUs h2 {
+    font-size: 25px;
+  }
+
+  #aboutUs h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  #aboutUs p {
+    font-size: 15px;
+  }
+
+  #aboutUsFooter div h1 {
+    font-size: 35px;
+  }
+
+  #aboutUsFooter div p {
+    font-size: 12px;
+  }
+
+  #infoSection {
+    height: 1300px;
+  }
+
+  #infoSection h1 {
+    font-size: 30px;
+  }
+
+  #infoSection span {
+    font-size: 20px;
+  }
+}
+
+/* over 768px and under 992px */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  #mainContent {
+    gap: 2rem;
+  }
+  #mainContent h1 {
+    font-size: 35px;
+  }
+
+  #aboutUs h1 {
+    font-size: 3vw;
+    margin-bottom: 20px;
+  }
+
+  #aboutUs h2 {
+    font-size: 2.5vw;
+  }
+
+  #aboutUs h3 {
+    font-size: 2vw;
+  }
+
+  #aboutUs p {
+    font-size: 1.5vw;
+  }
+
+  #infoSection h1 {
+    font-size: 3vw;
+  }
+
+  #infoSection span {
+    font-size: 1.5vw;
+  }
+
+  #infoSection .content {
+    width: 80%;
+  }
+
+  #infoSection .image {
+    width: 35%;
+  }
+
+  #infoSection .image h2 {
+    font-size: 2vw;
+  }
+
+  /* over 992px and under 1200px */
 }
