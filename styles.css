@@ -310,20 +310,20 @@ nav img {
 }
 
 #aboutUs h1 {
-  font-size: 2vw;
+  font-size: 2.5vw;
   margin-bottom: 30px;
 }
 
 #aboutUs h2 {
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 #aboutUs h3 {
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 
 #aboutUs p {
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 #aboutUsFooter {
@@ -363,11 +363,11 @@ nav img {
 }
 
 #infoSection h1 {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 #infoSection span {
-  font-size: 0.85vw;
+  font-size: 1.5vw;
 }
 
 #infoSection .content {
@@ -805,6 +805,26 @@ nav img {
   #infoSection .image h2 {
     font-size: 2vw;
   }
+}
 
-  /* over 992px and under 1200px */
+/* over 992px and under 1200px */
+
+/* under 430px */
+@media screen and (max-width: 430px) {
+  nav {
+    justify-content: center;
+    gap: 2rem;
+  }
+  #navLinks {
+    min-width: 0;
+    gap: 2rem;
+  }
+
+  #navLinks a {
+    font-size: 20px;
+  }
+
+  #mainContent .hurdles {
+    width: 85%;
+  }
 }
