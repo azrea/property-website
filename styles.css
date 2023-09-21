@@ -769,6 +769,10 @@ nav img {
     font-size: 35px;
   }
 
+  #mainContent .hurdles .hurdle {
+    font-size: 0.75rem;
+  }
+
   #aboutUs h1 {
     font-size: 3vw;
     margin-bottom: 20px;
@@ -805,9 +809,41 @@ nav img {
   #infoSection .image h2 {
     font-size: 2vw;
   }
+
+  #contactUsForm form {
+    width: 100%;
+  }
 }
 
-/* over 992px and under 1200px */
+/* over 1250px and under 1500px */
+@media screen and (min-width: 1249px) and (max-width: 2500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-colour);
+  }
+  #container {
+    max-width: 1200px;
+    overflow-x: auto;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #infoSection {
+    gap: 1.75rem;
+  }
+
+  #infoSection h1 {
+    font-size: 2vw;
+  }
+
+  #infoSection span {
+    font-size: 1vw;
+  }
+  #infoSection .content {
+    width: 70%;
+  }
+}
 
 /* under 430px */
 @media screen and (max-width: 430px) {
